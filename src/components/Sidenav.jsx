@@ -6,7 +6,6 @@ import MuiAppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import CssBaseline from '@mui/material/CssBaseline';
-
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import {useNavigate} from "react-router-dom";
@@ -27,7 +26,7 @@ const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
     width: drawerWidth,
-    backgroundColor:  ' rgb(155, 155, 155) ', // Specify your desired background color here
+    backgroundColor:  'rgb(173, 216, 230)', // Specify your desired background color here
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -45,7 +44,8 @@ const openedMixin = (theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: `calc(${theme.spacing(8)} + 1px)`,
     },
-    backgroundColor: 'rgb(155, 155, 155)', // Set the background color when the drawer is closed
+    opacity: 1,
+    backgroundColor: 'rgb(173, 216, 230)', // Set the background color when the drawer is closed
   });
 
 const DrawerHeader = styled('div')(({ theme }) => ({
@@ -53,6 +53,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'flex-end',
   padding: theme.spacing(0, 1),
+  opacity: 1.0,
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));
